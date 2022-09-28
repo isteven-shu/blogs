@@ -69,7 +69,7 @@ git push -f
 git push origin -d branch-name
 ```
 # git reset --mode #commit/branch
-![e2618f1f88e369c9951958173fd8ad5b_1662x1200.png@900-0-90-f.png](http://image.huawei.com/tiny-lts/v1/images/e2618f1f88e369c9951958173fd8ad5b_1662x1200.png@900-0-90-f.png)
+![image](https://user-images.githubusercontent.com/69393426/192718082-0641dc3f-43d7-451f-98d1-8c4a3c094d13.png)
 At a surface level, `git reset` is similar in behavior to `git checkout`. Where
 - `git checkout` solely operates on the HEAD ref pointer
 - `git reset` will move the HEAD ref pointer and the current branch ref pointer.
