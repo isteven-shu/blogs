@@ -19,8 +19,13 @@
       - [查看所有本地分支](#--------)
       - [查看所有本地分支及其与与remote-tracking branch的关联情况](#------------remote-tracking-branch-----)
       - [为已存在的local branch设置remote branch](#-----local-branch--remote-branch)
+- [子模块](#---)
+  * [添加子模块](#-----)
+  * [clone含子模块的仓库](#clone-------)
+  * [对子模块进行操作](#--------)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ---
 # Commit message的建议格式
