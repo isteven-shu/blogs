@@ -8,25 +8,23 @@
       - [简化方法](#----)
       - [简化方法的简化](#-------)
 - [git push](#git-push)
-      - [如果远程仓库没有这条本地分支](#--------------)
-      - [如果本地的历史改变了，只能强制push](#---------------push)
-      - [删除远程分支](#------)
+    + [如果远程仓库没有这条本地分支](#--------------)
+    + [如果本地的历史改变了，只能强制push](#---------------push)
+    + [删除远程分支](#------)
 - [git reset --mode #commit/branch](#git-reset---mode--commit-branch)
 - [修改历史](#----)
-      - [将当前修改融合进上一个commit](#-----------commit)
-      - [对多个commit进行修改](#---commit----)
+    + [将当前修改融合进上一个commit](#-----------commit)
+    + [对多个commit进行修改](#---commit----)
 - [git branch](#git-branch)
-      - [查看所有本地分支](#--------)
-      - [查看所有本地分支及其与与remote-tracking branch的关联情况](#------------remote-tracking-branch-----)
-      - [为已存在的local branch设置remote branch](#-----local-branch--remote-branch)
+    + [查看所有本地分支](#--------)
+    + [查看所有本地分支及其与与remote-tracking branch的关联情况](#------------remote-tracking-branch-----)
+    + [为已存在的local branch设置remote branch](#-----local-branch--remote-branch)
 - [子模块](#---)
   * [添加子模块](#-----)
   * [clone含子模块的仓库](#clone-------)
   * [对子模块进行操作](#--------)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
-
 ---
 # Commit message的建议格式
 Commit message由subject和body组成，标题与主体用空行隔开
@@ -80,7 +78,7 @@ git checkout severfix
 
 # git push
 push命令用于与远程仓库交互
-#### 如果远程仓库没有这条本地分支
+### 如果远程仓库没有这条本地分支
 ```
 git push -u origin branch-name 
 ```
@@ -88,11 +86,11 @@ git push -u origin branch-name
 ```
 git push --set-upstream origin branch-name
 ```
-#### 如果本地的历史改变了，只能强制push
+### 如果本地的历史改变了，只能强制push
 ```
 git push -f
 ```
-#### 删除远程分支
+### 删除远程分支
 ```
 git push origin -d branch-name
 ```
@@ -106,24 +104,24 @@ At a surface level, `git reset` is similar in behavior to `git checkout`. Where
 
 
 # 修改历史
-#### 将当前修改融合进上一个commit
+### 将当前修改融合进上一个commit
 ```
 git commit --amend -m ""
 ```
-#### 对多个commit进行修改
+### 对多个commit进行修改
 ```
 git rebase -i HEAD~#
 ```
 # git branch
-#### 查看所有本地分支
+### 查看所有本地分支
 ```
 git branch
 ```
-#### 查看所有本地分支及其与与remote-tracking branch的关联情况
+### 查看所有本地分支及其与与remote-tracking branch的关联情况
 ```
 git branch -vv
 ```
-#### 为已存在的local branch设置remote branch
+### 为已存在的local branch设置remote branch
 ```
 git branch -u origin/serverfix
 ```
