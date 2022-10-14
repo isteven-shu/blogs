@@ -1,5 +1,6 @@
 # git-commands
 ---
+[TOC]
 # Commit message的建议格式
 Commit message由subject和body组成，标题与主体用空行隔开
 1. subject
