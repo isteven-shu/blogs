@@ -1,5 +1,4 @@
 # git-commands
-- [git-commands](#git-commands)
 - [Commit message的建议格式](#commit-message-----)
 - [git checkout](#git-checkout)
     + [切换分支/commit](#-----commit)
@@ -126,4 +125,40 @@ git branch -u origin/serverfix
 或
 ```
 git branch --set-upstream-to origin/serverfix
+```
+
+# 子模块
+## 添加子模块
+给仓库内的path路径 添加submodule
+```
+git submodule add URL [path]
+```
+By default, submodules will add the subproject into a directory named the same as the repository. You can optionally add a different path at the end of the command if you want it to go elsewhere.
+添加子模块后，执行git status会显示有两个新文件
+- .gitmodules
+   - a configuration file that stores the mapping between the project’s URL and the local subdirectory you’ve pulled it into
+   - the repository’s branch to track
+- submodule-name folder
+  - the project folder entry
+although is a subdirectory in your working directory, Git sees it as a submodule and doesn’t track its contents when you’re not in that directory. Instead, Git sees it as a particular commit from that repository.
+## clone含子模块的仓库
+By default you get the directories that contain submodules, but none of the files within them yet.
+clone时同时初始化子模块：
+```
+git clone --recurse-submodules URL [path]
+```
+clone后初始化子模块：
+```
+git submodule update --init --recursive
+```
+## 对子模块进行操作
+对于已经初始化过了的子模块（不是一个空文件夹），进入子模块文件夹后可以直接执行git命令。
+也可以在主项目里对子模块进行操作：
+对某一个子模块fetch + merge
+```
+git submodule update --remote
+```
+update所有子模块
+```
+git submodule update --init --recursive
 ```
