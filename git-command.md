@@ -1,6 +1,29 @@
 # git-commands
+- [git-commands](#git-commands)
+- [Commit message的建议格式](#commit-message-----)
+- [git checkout](#git-checkout)
+    + [切换分支/commit](#-----commit)
+    + [创建新分支](#-----)
+    + [创建local branch来track remote-tracking branch](#--local-branch-track-remote-tracking-branch)
+      - [标准方法](#----)
+      - [简化方法](#----)
+      - [简化方法的简化](#-------)
+- [git push](#git-push)
+      - [如果远程仓库没有这条本地分支](#--------------)
+      - [如果本地的历史改变了，只能强制push](#---------------push)
+      - [删除远程分支](#------)
+- [git reset --mode #commit/branch](#git-reset---mode--commit-branch)
+- [修改历史](#----)
+      - [将当前修改融合进上一个commit](#-----------commit)
+      - [对多个commit进行修改](#---commit----)
+- [git branch](#git-branch)
+      - [查看所有本地分支](#--------)
+      - [查看所有本地分支及其与与remote-tracking branch的关联情况](#------------remote-tracking-branch-----)
+      - [为已存在的local branch设置remote branch](#-----local-branch--remote-branch)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ---
-[TOC]
 # Commit message的建议格式
 Commit message由subject和body组成，标题与主体用空行隔开
 1. subject
